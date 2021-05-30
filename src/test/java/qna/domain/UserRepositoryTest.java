@@ -38,8 +38,8 @@ public class UserRepositoryTest {
     }
 
     @Test
-    @DisplayName("id 기준 검색 테스트")
-    void findByIdAndDeletedFalse() {
+    @DisplayName("user id 기준 검색 테스트")
+    void findByUserIdTest() {
         User expected = userRepository.save(UserTest.JAVAJIGI);
         User actual = userRepository.findByUserId(expected.getUserId())
                                               .orElseThrow(IllegalArgumentException::new);
